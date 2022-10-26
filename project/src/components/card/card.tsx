@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-function Card (): JSX.Element {
+
+
+function Card (props: { value: string }): JSX.Element {
   return (
     <li className="locations__item">
-      <a className="locations__item-link tabs__item" href="#">
-        <span>Paris</span>
+      <a className={props.value === 'Amsterdam' ? 'locations__item-link tabs__item tabs__item--active' : 'locations__item-link tabs__item'} href="#">
+        <span>{props.value}</span>
       </a>
     </li>
   );
