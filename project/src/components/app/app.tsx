@@ -1,7 +1,13 @@
-import WelcomeScreen from '../../pages/welcome-screen/welcome-screen';
+import Main from '../../pages/main/main';
 
-function App(): JSX.Element {
-  return <WelcomeScreen />;
+type AppMainProps = {
+  rentCount: number;
+}
+
+function App({rentCount}: AppMainProps): JSX.Element {
+  return (
+    <Main rentCount={rentCount} />
+  );
 }
 
 export default App;
