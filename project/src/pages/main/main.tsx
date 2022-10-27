@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import Card from '../../components/card/card';
 
-const City = {
+const PopularCity = {
   PARIS: 'Paris',
   COLOGNE: 'Cologne',
   BRUSSELS: 'Brussels',
@@ -50,7 +50,7 @@ function Main({rentCount}: MainProps): JSX.Element {
           <section className="locations container">
             <ul className="locations__list tabs__list">
               {
-                Object.values(City).map((element) => <Card value={element} key={element} />)
+                Object.values(PopularCity).map((city) => <Card value={city} key={city} />)
               }
             </ul>
           </section>
