@@ -8,7 +8,7 @@ import { Offer } from '../../types/offer';
 
 type AppMainProps = {
   rentCount: number;
-  offers: Offer;
+  offers: Offer[];
 }
 
 function App({rentCount, offers}: AppMainProps): JSX.Element {
