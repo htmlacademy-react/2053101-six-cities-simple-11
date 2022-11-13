@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Link } from 'react-router-dom';
-import Card from '../../components/card/card';
+import Location from '../../components/location/location';
 import Logo from '../../pages/logo/logo';
 
 const PopularCity = {
@@ -45,15 +45,17 @@ function Main({rentCount}: MainProps): JSX.Element {
 
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
+
         <div className="tabs">
           <section className="locations container">
             <ul className="locations__list tabs__list">
               {
-                Object.values(PopularCity).map((city) => <Card value={city} key={city} />)
+                Object.values(PopularCity).map((city) => <Location value={city} key={city} />)
               }
             </ul>
           </section>
         </div>
+
         <div className="cities">
           <div className="cities__places-container container">
             <section className="cities__places places">
