@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Link } from 'react-router-dom';
-import Logo from '../../pages/logo/logo';
+import Logo from '../../components/logo/logo';
 
 function Property (): JSX.Element {
   return (
