@@ -5,9 +5,9 @@ export const offers: Offer[] = [
     city: {
       name: 'Cologne',
       location: {
-        latitude: '50.938361',
-        longitude: '6.959974',
-        zoom: '13'
+        latitude: 50.938361,
+        longitude: 6.959974,
+        zoom: 13
       }
     },
     previewImage: 'https://11.react.pages.academy/static/hotel/1.jpg',
@@ -29,11 +29,11 @@ export const offers: Offer[] = [
     ],
     title: 'Loft Studio in the Central Area',
     isPremium: true,
-    rating: '4.4',
+    rating: 4.9,
     type: 'house',
-    bedrooms: '5',
-    maxAdults: '7',
-    price: '543',
+    bedrooms: 5,
+    maxAdults: 7,
+    price: 543,
     goods: [
       'Towels',
       'Breakfast',
@@ -43,26 +43,26 @@ export const offers: Offer[] = [
       'Baby seat'
     ],
     host: {
-      id: '25',
+      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg'
     },
     description: 'A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.',
     location: {
-      latitude: '50.954361',
-      longitude: '6.982974',
-      zoom: '16'
+      latitude: 50.954361,
+      longitude: 6.982974,
+      zoom: 16
     },
-    id: '1'
+    id: 1
   },
   {
     city: {
       name: 'Brussels',
       location: {
-        latitude: '50.846557',
-        longitude: '4.351697',
-        zoom: '13'
+        latitude: 50.846557,
+        longitude: 4.351697,
+        zoom: 13
       }
     },
     previewImage: 'https://11.react.pages.academy/static/hotel/20.jpg',
@@ -84,11 +84,11 @@ export const offers: Offer[] = [
     ],
     title: 'Penthouse, 4-5 rooms + 5 balconies',
     isPremium: false,
-    rating: '2.2',
+    rating: 2.2,
     type: 'house',
-    bedrooms: '2',
-    maxAdults: '4',
-    price: '870',
+    bedrooms: 2,
+    maxAdults: 4,
+    price: 870,
     goods: [
       'Coffee machine',
       'Cable TV',
@@ -103,26 +103,26 @@ export const offers: Offer[] = [
       'Air conditioning'
     ],
     host: {
-      id: '25',
+      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg'
     },
     description: 'Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.',
     location: {
-      latitude: '50.833557',
-      longitude: '4.374696999999999',
-      zoom: '16'
+      latitude: 50.833557,
+      longitude: 4.374696999999999,
+      zoom: 16
     },
-    id: '2'
+    id: 2
   },
   {
     city: {
       name: 'Dusseldorf',
       location: {
-        latitude: '51.225402',
-        longitude: '6.776314',
-        zoom: '13'
+        latitude: 51.225402,
+        longitude: 6.776314,
+        zoom: 13
       }
     },
     previewImage: 'https://11.react.pages.academy/static/hotel/17.jpg',
@@ -144,11 +144,11 @@ export const offers: Offer[] = [
     ],
     title: 'The house among olive ',
     isPremium: false,
-    rating: '3.5',
+    rating: 3.5,
     type: 'apartment',
-    bedrooms: '3',
-    maxAdults: '7',
-    price: '360',
+    bedrooms: 3,
+    maxAdults: 7,
+    price: 360,
     goods: [
       'Washer',
       'Laptop friendly workspace',
@@ -157,26 +157,26 @@ export const offers: Offer[] = [
       'Breakfast'
     ],
     host: {
-      id: '25',
+      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg'
     },
     description: 'Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.',
     location: {
-      latitude: '51.236402000000005',
-      longitude: '6.784314',
-      zoom: '16'
+      latitude: 51.236402000000005,
+      longitude: 6.784314,
+      zoom: 16
     },
-    id: '3'
+    id: 3
   },
   {
     city: {
       name: 'Dusseldorf',
       location: {
-        latitude: '51.225402',
-        longitude: '6.776314',
-        zoom: '13'
+        latitude: 51.225402,
+        longitude: 6.776314,
+        zoom: 13
       }
     },
     previewImage: 'https://11.react.pages.academy/static/hotel/7.jpg',
@@ -197,29 +197,29 @@ export const offers: Offer[] = [
       'https://11.react.pages.academy/static/hotel/14.jpg'
     ],
     title: 'Tile House',
-    isPremium: false,
-    rating: '4.4',
+    isPremium: true,
+    rating: 4.4,
     type: 'apartment',
-    bedrooms: '3',
-    maxAdults: '6',
-    price: '426',
+    bedrooms: 3,
+    maxAdults: 6,
+    price: 426,
     goods: [
       'Laptop friendly workspace',
       'Washer',
       'Breakfast'
     ],
     host: {
-      id: '25',
+      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg'
     },
     description: 'Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.',
     location: {
-      latitude: '51.216402',
-      longitude: '6.758314',
-      zoom: '16'
+      latitude: 51.216402,
+      longitude: 6.758314,
+      zoom: 16
     },
-    id: '4'
+    id: 4
   }
 ];

@@ -1,7 +1,7 @@
 type Location = {
-  latitude: string;
-  longitude: string;
-  zoom: string;
+  latitude: number;
+  longitude: number;
+  zoom: number;
 };
 
 type City = {
@@ -10,7 +10,7 @@ type City = {
 };
 
 type Host = {
-  id: string;
+  id: number;
   name: string;
   isPro: boolean;
   avatarUrl: string;
@@ -22,14 +22,14 @@ export type Offer= {
   images: string[];
   title: string;
   isPremium: boolean;
-  rating: string;
+  rating: number;
   type: string;
-  bedrooms: string;
-  maxAdults: string;
-  price: string;
+  bedrooms: number;
+  maxAdults: number;
+  price: number;
   goods: string[];
   host: Host;
   description: string;
   location: Location;
-  id: string;
+  id: number;
 };
