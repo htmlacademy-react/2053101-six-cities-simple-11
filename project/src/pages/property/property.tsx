@@ -5,6 +5,7 @@ import OfferCardNearby from '../../components/offer-card-nearby/offer-card-nearb
 import { Offer } from '../../types/offer';
 import { photoGalleryCount, ratingRatio, offerTypeLetter } from '../../mocks/const';
 import { UserReview } from '../../types/review';
+import dayjs from 'dayjs';
 
 type ProperyProps = {
   offers: Offer[];
@@ -190,7 +191,7 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
                           <p className="reviews__text">
                             {review.comment}
                           </p>
-                          <time className="reviews__time" dateTime={review.date}>April 2019</time>
+                          <time className="reviews__time" dateTime={review.date}>{dayjs(review.date).format('MMMM YYYY')}</time>
                         </div>
                       </li>
                     ))
