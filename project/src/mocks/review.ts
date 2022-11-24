@@ -1,51 +1,51 @@
-import { Review } from '../types/review';
+import { UserReview } from '../types/review';
 
-export const reviews: Review[] = [
+export const reviews: UserReview[] = [
   {
-    id: '1',
+    id: 1,
     user: {
-      id: '12',
+      id: 12,
       isPro: true,
       name: 'Isaac',
       avatarUrl: 'https://11.react.pages.academy/static/avatar/3.jpg'
     },
-    rating: '4',
+    rating: 4,
     comment: 'We loved it so much, the house, the veiw, the location just great.. Highly reccomend :)',
     date: '2022-10-16T13:58:46.495Z'
   },
   {
-    id: '2',
+    id: 1,
     user: {
-      id: '23',
+      id: 23,
       isPro: false,
       name: 'Joosi',
       avatarUrl: 'https://11.react.pages.academy/static/avatar/3.jpg'
     },
-    rating: '5',
+    rating: 5,
     comment: 'Something text',
     date: '2022-11-14T17:00:46.495Z'
   },
   {
-    id: '3',
+    id: 3,
     user: {
-      id: '34',
+      id: 34,
       isPro: true,
       name: 'Musk',
       avatarUrl: 'https://11.react.pages.academy/static/avatar/3.jpg'
     },
-    rating: '1',
+    rating: 1,
     comment: 'Also text',
     date: '2022-02-10T08:58:44.495Z'
   },
   {
-    id: '4',
+    id: 4,
     user: {
-      id: '45',
+      id: 45,
       isPro: true,
       name: 'Mary',
       avatarUrl: 'https://11.react.pages.academy/static/avatar/3.jpg'
     },
-    rating: '9',
+    rating: 9,
     comment: 'Very good!',
     date: '2021-11-05T15:14:25.495Z'
   }

@@ -45,7 +45,7 @@ export const offers: Offer[] = [
     host: {
       id: 25,
       name: 'Angelina',
-      isPro: true,
+      isPro: false,
       avatarUrl: 'img/avatar-angelina.jpg'
     },
     description: 'A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.',

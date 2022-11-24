@@ -1,9 +1,17 @@
 export enum AppRoute {
   Main = '/',
   Login = 'login',
-  Property = 'offer/:id'
+  Property = 'offer/:id',
 }
 
-const ratingRatio = 20;
+export const photoGalleryCount = {
+  start: 0,
+  end: 6
+};
 
-export default ratingRatio;
+export const ratingRatio = 20;
+
+export const offerTypeLetter = {
+  first: 0,
+  other: 1
+};
