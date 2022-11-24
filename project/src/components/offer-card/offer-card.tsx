@@ -1,9 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../../mocks/const';
 import { Offer } from '../../types/offer';
-import ratingRatio from '../../mocks/const';
+import { ratingRatio, offerTypeLetter } from '../../mocks/const';
 
 type OfferCardProp = {
   offer: Offer;
@@ -16,11 +15,17 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
     isPremium,
     price,
     rating,
+    type,
+    id
   } = offer;
 
   const ratingStyle = {
     width: `${rating * ratingRatio}%`
   };
+
+  const propertyRoute = `offer/:${id}`;
+
+  const offerType = type[offerTypeLetter.first].toUpperCase() + type.slice(offerTypeLetter.other);
 
   return (
     <>
@@ -31,7 +36,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
         </div>
       }
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <Link to={AppRoute.Property}>
+        <Link to={propertyRoute}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image"/>
         </Link>
       </div>
@@ -50,9 +55,9 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={''}>{title}</Link>
+          <Link to={propertyRoute}>{title}</Link>
         </h2>
-        <p className="place-card__type">Apartment</p>
+        <p className="place-card__type">{offerType}</p>
       </div>
     </>
   );
