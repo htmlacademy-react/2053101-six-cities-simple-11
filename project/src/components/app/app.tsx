@@ -5,13 +5,15 @@ import Login from '../../pages/login/login';
 import Property from '../../pages/property/property';
 import NotFoundPage from '../../pages/not-found-page/not-found-page';
 import { Offer } from '../../types/offer';
+import { UserReview } from '../../types/review';
 
 type AppMainProps = {
   rentCount: number;
   offers: Offer[];
+  reviews: UserReview[];
 }
 
-function App({rentCount, offers}: AppMainProps): JSX.Element {
+function App({rentCount, offers, reviews}: AppMainProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -20,7 +22,7 @@ function App({rentCount, offers}: AppMainProps): JSX.Element {
           element={
             <Main
               rentCount={rentCount}
-              offerList={offers}
+              offers={offers}
             />
           }
         />
@@ -30,7 +32,12 @@ function App({rentCount, offers}: AppMainProps): JSX.Element {
         />
         <Route
           path={AppRoute.Property}
-          element={<Property />}
+          element={
+            <Property
+              offers={offers}
+              reviews={reviews}
+            />
+          }
         />
         <Route
           path="*"

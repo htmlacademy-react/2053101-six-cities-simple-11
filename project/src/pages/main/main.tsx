@@ -15,10 +15,10 @@ const PopularCity = {
 
 type MainProps = {
   rentCount: number;
-  offerList: Offer[];
+  offers: Offer[];
 };
 
-function Main({rentCount, offerList}: MainProps): JSX.Element {
+function Main({rentCount, offers}: MainProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -83,7 +83,7 @@ function Main({rentCount, offerList}: MainProps): JSX.Element {
               <div className="cities__places-list places__list tabs__content">
 
                 {
-                  offerList.map((offer) => <OfferCardCity offer={offer} key={offer.id} />)
+                  offers.map((offer) => <OfferCardCity offer={offer} key={offer.id} />)
                 }
 
               </div>
