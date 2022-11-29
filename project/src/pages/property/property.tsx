@@ -6,6 +6,7 @@ import { Offer } from '../../types/offer';
 import { photoGalleryCount, ratingRatio, offerTypeLetter } from '../../mocks/const';
 import { UserReview } from '../../types/review';
 import dayjs from 'dayjs';
+import Review from '../../components/review/review';
 
 type ProperyProps = {
   offers: Offer[];
@@ -197,9 +198,10 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
                     ))
                   }
                 </ul>
+
+                <Review />
+
               </section>
-
-
             </div>
           </div>
 
