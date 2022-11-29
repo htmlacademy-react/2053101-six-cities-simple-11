@@ -8,8 +8,7 @@ type OfferCardCityProps = {
 }
 
 function OfferCardCity({offer}: OfferCardCityProps): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_offerCardId, setOfferCardId] = useState('');
+  const [, setOfferCardId] = useState('');
 
   function handleMouseEnter(): void {
     setOfferCardId(() => `${offer.id}`);

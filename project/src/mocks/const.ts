@@ -15,3 +15,11 @@ export const offerTypeLetter = {
   first: 0,
   other: 1
 };
+
+export const reviewRatingStar = {
+  five: [5, 'perfect'],
+  four: [4, 'good'],
+  three: [3, 'not bad'],
+  two: [2, 'badly'],
+  one: [1, 'terribly'],
+} as const;
