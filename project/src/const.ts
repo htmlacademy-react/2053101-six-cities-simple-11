@@ -1,7 +1,7 @@
 export enum AppRoute {
   Main = '/',
   Login = 'login',
-  Property = 'offer/:id',
+  Property = 'offer/:',
 }
 
 export const photoGalleryCount = {
