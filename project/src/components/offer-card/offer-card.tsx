@@ -1,8 +1,6 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-
 import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offer';
-import { ratingRatio, offerTypeLetter } from '../../mocks/const';
+import { ratingRatio, offerTypeLetter } from '../../const';
 
 type OfferCardProp = {
   offer: Offer;
@@ -37,7 +35,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
       }
       <div className="cities__image-wrapper place-card__image-wrapper">
         <Link to={propertyRoute}>
-          <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image"/>
+          <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place"/>
         </Link>
       </div>
       <div className="place-card__info">

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import { Link } from 'react-router-dom';
 import Location from '../../components/location/location';
 import Logo from '../../components/logo/logo';

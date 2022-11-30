@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { AppRoute } from '../../mocks/const';
+import { AppRoute } from '../../const';
 
 function NotFoundPage(): JSX.Element {
   return(

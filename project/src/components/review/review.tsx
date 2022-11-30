@@ -1,4 +1,4 @@
-import { reviewRatingStar } from '../../mocks/const';
+import { reviewRatingStar } from '../../const';
 import { useState, ChangeEvent } from 'react';
 
 function Review(): JSX.Element {

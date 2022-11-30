@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import { Link, useParams } from 'react-router-dom';
 import Logo from '../../components/logo/logo';
 import OfferCardNearby from '../../components/offer-card-nearby/offer-card-nearby';
 import { Offer } from '../../types/offer';
-import { photoGalleryCount, ratingRatio, offerTypeLetter } from '../../mocks/const';
+import { photoGalleryCount, ratingRatio, offerTypeLetter } from '../../const';
 import { UserReview } from '../../types/review';
 import dayjs from 'dayjs';
 import Review from '../../components/review/review';
@@ -41,7 +40,7 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
     .slice(photoGalleryCount.start, photoGalleryCount.end)
     .map((image) => (
       <div className="property__image-wrapper" key={image}>
-        <img className="property__image" src={image} alt="Photo studio" />
+        <img className="property__image" src={image} alt="Studio" />
       </div>
     ));
 

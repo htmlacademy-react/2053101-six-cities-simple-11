@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import OfferCard from '../offer-card/offer-card';
 import { Offer } from '../../types/offer';
 import { useState } from 'react';

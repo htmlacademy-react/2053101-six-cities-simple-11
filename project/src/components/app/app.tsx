@@ -1,5 +1,5 @@
 import {Route, BrowserRouter, Routes} from 'react-router-dom';
-import { AppRoute } from '../../mocks/const';
+import { AppRoute } from '../../const';
 import Main from '../../pages/main/main';
 import Login from '../../pages/login/login';
 import Property from '../../pages/property/property';
