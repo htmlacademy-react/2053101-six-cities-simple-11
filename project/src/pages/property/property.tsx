@@ -6,7 +6,7 @@ import { PHOTO_GALLERY_COUNT, RATING_RATIO } from '../../const';
 import { UserReview } from '../../types/review';
 import dayjs from 'dayjs';
 import Review from '../../components/review/review';
-import { capitalizeFirstChar } from '../../util';
+import { capitalizeFirstChar, getRatingWidth } from '../../util';
 
 type ProperyProps = {
   offers: Offer[];
@@ -46,7 +46,7 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
     );
 
   const ratingStyle = {
-    width: `${rating * RATING_RATIO}%`
+    width: getRatingWidth(rating)
   };
 
   const hotelReviews = reviews.filter((review) => review.id === Number(id));
@@ -122,7 +122,7 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
               </ul>
               <div className="property__price">
                 <b className="property__price-value">&euro;{price}</b>
-                <span className="property__price-text">&nbsp;night</span>
+                <span className="property__price-text">&nbsp;{' '}night</span>
               </div>
               <div className="property__inside">
                 <h2 className="property__inside-title">What&apos;s inside</h2>

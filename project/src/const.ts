@@ -2,6 +2,7 @@ export enum AppRoute {
   Main = '/',
   Login = 'login',
   Property = 'offer/:',
+  NotFoundPage = '*',
 }
 
 export const PHOTO_GALLERY_COUNT = 6;

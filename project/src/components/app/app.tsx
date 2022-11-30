@@ -40,7 +40,7 @@ function App({rentCount, offers, reviews}: AppMainProps): JSX.Element {
           }
         />
         <Route
-          path="*"
+          path={AppRoute.NotFoundPage}
           element={<NotFoundPage />}
         />
       </Routes>

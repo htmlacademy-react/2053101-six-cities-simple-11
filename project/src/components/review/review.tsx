@@ -7,14 +7,14 @@ function Review(): JSX.Element {
     rating: 0
   });
 
-  const handleTextAreaChange = (evt: ChangeEvent<HTMLTextAreaElement>): void => {
+  const handleTextAreaInput = (evt: ChangeEvent<HTMLTextAreaElement>): void => {
     setReview({
       ...review,
       comment: evt.target.value
     });
   };
 
-  const handleRadioButtonClick = (star: number) => () => {
+  const handleFormInput = (star: number) => () => {
     setReview({
       ...review,
       rating: star
@@ -30,7 +30,7 @@ function Review(): JSX.Element {
             <label
               htmlFor={`${value}-star`}
               className="reviews__rating-label form__rating-label"
-              title={`${title}`}
+              title={title}
               key={value}
             >
               <input
@@ -39,7 +39,7 @@ function Review(): JSX.Element {
                 value={`${value}-star`}
                 id={`${value}-star`}
                 type="radio"
-                onInput={handleRadioButtonClick(value)}
+                onInput={handleFormInput(value)}
               />
               <svg
                 className="form__star-image"
@@ -58,7 +58,7 @@ function Review(): JSX.Element {
         id="review"
         name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
-        onInput={handleTextAreaChange}
+        onInput={handleTextAreaInput}
       >
 
       </textarea>

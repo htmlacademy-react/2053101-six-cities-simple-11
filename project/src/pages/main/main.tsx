@@ -17,6 +17,16 @@ type MainProps = {
   offers: Offer[];
 };
 
+function Cities() {
+  return(
+    <>
+      {
+        Object.values(PopularCity).map((city) => <Location value={city} key={city} />)
+      }
+    </>
+  );
+}
+
 function Main({rentCount, offers}: MainProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
@@ -51,9 +61,7 @@ function Main({rentCount, offers}: MainProps): JSX.Element {
         <div className="tabs">
           <section className="locations container">
             <ul className="locations__list tabs__list">
-              {
-                Object.values(PopularCity).map((city) => <Location value={city} key={city} />)
-              }
+              <Cities />
             </ul>
           </section>
         </div>
