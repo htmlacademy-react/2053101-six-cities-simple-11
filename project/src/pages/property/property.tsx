@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import Logo from '../../components/logo/logo';
 import OfferCardNearby from '../../components/offer-card-nearby/offer-card-nearby';
 import { Offer } from '../../types/offer';
-import { photoGalleryCount, ratingRatio } from '../../const';
+import { PHOTO_GALLERY_COUNT, RATING_RATIO } from '../../const';
 import { UserReview } from '../../types/review';
 import dayjs from 'dayjs';
 import Review from '../../components/review/review';
@@ -38,15 +38,15 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
   } = currentOffer;
 
   const photoGallery = images
-    .slice(photoGalleryCount.start, photoGalleryCount.end)
+    .slice(0, PHOTO_GALLERY_COUNT)
     .map((image) => (
       <div className="property__image-wrapper" key={image}>
         <img className="property__image" src={image} alt="Studio" />
-      </div>
-    ));
+      </div>)
+    );
 
   const ratingStyle = {
-    width: `${rating * ratingRatio}%`
+    width: `${rating * RATING_RATIO}%`
   };
 
   const hotelReviews = reviews.filter((review) => review.id === Number(id));
@@ -180,7 +180,7 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
                           <div className="reviews__rating rating">
                             <div className="reviews__stars rating__stars">
                               <span style={
-                                { width: `${review.rating * ratingRatio}` }
+                                { width: `${review.rating * RATING_RATIO}` }
                               }
                               >
                               </span>

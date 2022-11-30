@@ -4,12 +4,9 @@ export enum AppRoute {
   Property = 'offer/:',
 }
 
-export const photoGalleryCount = {
-  start: 0,
-  end: 6
-};
+export const PHOTO_GALLERY_COUNT = 6;
 
-export const ratingRatio = 20;
+export const RATING_RATIO = 20;
 
 export const REVIEW_RATING_STARS = [
   { title: 'perfect', value: 5 },
