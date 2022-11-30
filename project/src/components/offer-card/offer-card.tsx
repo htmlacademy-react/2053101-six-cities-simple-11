@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offer';
-import { offerTypeLetter, AppRoute } from '../../const';
-import { getRatingWidth } from '../../util';
+import { AppRoute } from '../../const';
+import { getRatingWidth, capitalizeFirstChar } from '../../util';
 
 type OfferCardProp = {
   offer: Offer;
@@ -21,8 +21,6 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
   const ratingStyle = {
     width: getRatingWidth(rating)
   };
-
-  const offerType = type[offerTypeLetter.first].toUpperCase() + type.slice(offerTypeLetter.other);
 
   return (
     <>
@@ -54,7 +52,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
         <h2 className="place-card__name">
           <Link to={`${AppRoute.Property}${id}`}>{title}</Link>
         </h2>
-        <p className="place-card__type">{offerType}</p>
+        <p className="place-card__type">{capitalizeFirstChar(type)}</p>
       </div>
     </>
   );

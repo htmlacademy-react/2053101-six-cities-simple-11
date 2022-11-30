@@ -2,10 +2,11 @@ import { Link, useParams } from 'react-router-dom';
 import Logo from '../../components/logo/logo';
 import OfferCardNearby from '../../components/offer-card-nearby/offer-card-nearby';
 import { Offer } from '../../types/offer';
-import { photoGalleryCount, ratingRatio, offerTypeLetter } from '../../const';
+import { photoGalleryCount, ratingRatio } from '../../const';
 import { UserReview } from '../../types/review';
 import dayjs from 'dayjs';
 import Review from '../../components/review/review';
+import { capitalizeFirstChar } from '../../util';
 
 type ProperyProps = {
   offers: Offer[];
@@ -47,8 +48,6 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
   const ratingStyle = {
     width: `${rating * ratingRatio}%`
   };
-
-  const offerType = type[offerTypeLetter.first].toUpperCase() + type.slice(offerTypeLetter.other);
 
   const hotelReviews = reviews.filter((review) => review.id === Number(id));
 
@@ -112,7 +111,7 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
-                  {offerType}
+                  {capitalizeFirstChar(type)}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
                   {bedrooms} Bedrooms
