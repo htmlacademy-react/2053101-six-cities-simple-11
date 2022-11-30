@@ -11,15 +11,10 @@ export const photoGalleryCount = {
 
 export const ratingRatio = 20;
 
-export const offerTypeLetter = {
-  first: 0,
-  other: 1
-};
-
-export const reviewRatingStar = {
-  five: [5, 'perfect'],
-  four: [4, 'good'],
-  three: [3, 'not bad'],
-  two: [2, 'badly'],
-  one: [1, 'terribly'],
-} as const;
+export const REVIEW_RATING_STARS = [
+  { title: 'perfect', value: 5 },
+  { title: 'good', value: 4 },
+  { title: 'not bad', value: 3 },
+  { title: 'badly', value: 2 },
+  { title: 'terribly', value: 1 }
+];

@@ -1,4 +1,4 @@
-import { reviewRatingStar } from '../../const';
+import { REVIEW_RATING_STARS } from '../../const';
 import { useState, ChangeEvent } from 'react';
 
 function Review(): JSX.Element {
@@ -26,20 +26,20 @@ function Review(): JSX.Element {
       <label className="reviews__label form__label" htmlFor="review">Your review</label>
       <div className="reviews__rating-form form__rating">
         {
-          Object.values(reviewRatingStar).map(([star, title]) => (
+          Object.values(REVIEW_RATING_STARS).map(({value, title}) => (
             <label
-              htmlFor={`${star}-star`}
+              htmlFor={`${value}-star`}
               className="reviews__rating-label form__rating-label"
               title={`${title}`}
-              key={star}
+              key={value}
             >
               <input
                 className="form__rating-input visually-hidden"
                 name="rating"
-                value={`${star}-star`}
-                id={`${star}-star`}
+                value={`${value}-star`}
+                id={`${value}-star`}
                 type="radio"
-                onInput={handleRadioButtonClick(star)}
+                onInput={handleRadioButtonClick(value)}
               />
               <svg
                 className="form__star-image"
