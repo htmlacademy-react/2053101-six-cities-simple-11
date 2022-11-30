@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offer';
-import { ratingRatio, offerTypeLetter } from '../../const';
+import { offerTypeLetter, AppRoute } from '../../const';
+import { getRatingWidth } from '../../util';
 
 type OfferCardProp = {
   offer: Offer;
@@ -18,10 +19,10 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
   } = offer;
 
   const ratingStyle = {
-    width: `${rating * ratingRatio}%`
+    width: getRatingWidth(rating)
   };
 
-  const propertyRoute = `offer/:${id}`;
+  // const propertyRoute = `offer/:${id}`;
 
   const offerType = type[offerTypeLetter.first].toUpperCase() + type.slice(offerTypeLetter.other);
 
@@ -34,7 +35,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
         </div>
       }
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <Link to={propertyRoute}>
+        <Link to={`${AppRoute.Property}/${id}`}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place"/>
         </Link>
       </div>
@@ -53,7 +54,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={propertyRoute}>{title}</Link>
+          <Link to={`${AppRoute.Property}/${id}`}>{title}</Link>
         </h2>
         <p className="place-card__type">{offerType}</p>
       </div>
