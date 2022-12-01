@@ -1,27 +1,19 @@
 import OfferCard from '../offer-card/offer-card';
 import { Offer } from '../../types/offer';
-import { useState } from 'react';
 
 type OfferCardCityProps = {
   offer: Offer;
+  onHover: (offerId: number | undefined) => void;
 }
 
-function OfferCardCity({offer}: OfferCardCityProps): JSX.Element {
-  const [, setOfferCardId] = useState('');
-
-  function handleMouseEnter(): void {
-    setOfferCardId(() => `${offer.id}`);
-  }
-
-  function handleMouseLeave(): void {
-    setOfferCardId(() => (''));
-  }
+function OfferCardCity({offer, onHover}: OfferCardCityProps): JSX.Element {
+  const {id} = offer;
 
   return(
     <article
       className='cities__card place-card'
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => onHover(id)}
+      onMouseLeave={() => onHover(undefined)}
     >
       <OfferCard offer={offer} />
     </article>

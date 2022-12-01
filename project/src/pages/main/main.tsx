@@ -3,6 +3,7 @@ import Location from '../../components/location/location';
 import Logo from '../../components/logo/logo';
 import { Offer } from '../../types/offer';
 import OfferCardCity from '../../components/offer-card-city/offer-card-city';
+import { useState } from 'react';
 
 const PopularCity = {
   PARIS: 'Paris',
@@ -28,6 +29,16 @@ function Cities() {
 }
 
 function Main({rentCount, offers}: MainProps): JSX.Element {
+  const [, setActiveOffer] = useState<Offer | null>(null);
+
+  const handleOfferCardHover = (offerId: number | undefined) => {
+    const offer = offerId
+      ? offers.find(({ id }) => id === offerId) ?? null
+      : null;
+
+    setActiveOffer(offer);
+  };
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -88,13 +99,16 @@ function Main({rentCount, offers}: MainProps): JSX.Element {
               </form>
 
               <div className="cities__places-list places__list tabs__content">
-
                 {
-                  offers.map((offer) => <OfferCardCity offer={offer} key={offer.id} />)
+                  offers.map((offer) => (
+                    <OfferCardCity
+                      offer={offer}
+                      key={offer.id}
+                      onHover={handleOfferCardHover}
+                    />
+                  ))
                 }
-
               </div>
-
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
