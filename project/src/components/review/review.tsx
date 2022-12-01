@@ -14,7 +14,7 @@ function Review(): JSX.Element {
     });
   };
 
-  const handleFormInput = (star: number) => () => {
+  const handleRadioButtonClick = (star: number): void => {
     setReview({
       ...review,
       rating: star
@@ -39,7 +39,7 @@ function Review(): JSX.Element {
                 value={`${value}-star`}
                 id={`${value}-star`}
                 type="radio"
-                onInput={handleFormInput(value)}
+                onClick={() => handleRadioButtonClick(value)}
               />
               <svg
                 className="form__star-image"
