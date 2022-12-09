@@ -3,7 +3,7 @@ import { Offer } from '../../types/offer';
 
 type OfferCardCityProps = {
   offer: Offer;
-  onHover: (offerId: number | undefined) => void;
+  onHover: (offerId?: number) => void;
 }
 
 function OfferCardCity({offer, onHover}: OfferCardCityProps): JSX.Element {
@@ -13,7 +13,7 @@ function OfferCardCity({offer, onHover}: OfferCardCityProps): JSX.Element {
     <article
       className='cities__card place-card'
       onMouseEnter={() => onHover(id)}
-      onMouseLeave={() => onHover(undefined)}
+      onMouseLeave={() => onHover()}
     >
       <OfferCard offer={offer} />
     </article>
