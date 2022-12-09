@@ -4,6 +4,7 @@ import Logo from '../../components/logo/logo';
 import { Offer } from '../../types/offer';
 import OfferCardCity from '../../components/offer-card-city/offer-card-city';
 import { useState } from 'react';
+import Map from '../../components/map/map';
 
 const PopularCity = {
   PARIS: 'Paris',
@@ -29,7 +30,7 @@ function Cities() {
 }
 
 function Main({rentCount, offers}: MainProps): JSX.Element {
-  const [, setActiveOffer] = useState<Offer | null>(null);
+  const [activeOffer, setActiveOffer] = useState<Offer | null>(null);
 
   const handleOfferCardHover = (offerId: number | undefined) => {
     const offer = offerId
@@ -111,7 +112,12 @@ function Main({rentCount, offers}: MainProps): JSX.Element {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map">
+                <Map
+                  offers={offers}
+                  activeOffer={activeOffer}
+                />
+              </section>
             </div>
           </div>
         </div>
