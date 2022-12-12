@@ -31,7 +31,7 @@ function App({rentCount, offers, reviews}: AppMainProps): JSX.Element {
           element={<Login />}
         />
         <Route
-          path={`${AppRoute.Property}id`}
+          path={`${AppRoute.Property}/:id`}
           element={
             <Property
               offers={offers}
