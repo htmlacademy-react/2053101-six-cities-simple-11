@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Link, useParams } from 'react-router-dom';
 import Logo from '../../components/logo/logo';
 import OfferCardNearby from '../../components/offer-card-nearby/offer-card-nearby';
@@ -14,10 +15,10 @@ type ProperyProps = {
 }
 
 function Property ({offers, reviews}: ProperyProps): JSX.Element {
-  let {id} = useParams();
-  id = id?.slice(1);
+  const {id} = useParams() as {id: string};console.log(id);
+  const offerId = Number(id);
 
-  const currentOffer = offers.find((offer) => offer.id === Number(id)) as Offer;
+  const currentOffer = offers.find((offer) => offer.id === offerId) as Offer;
 
   const {
     images,
@@ -49,9 +50,9 @@ function Property ({offers, reviews}: ProperyProps): JSX.Element {
     width: getRatingWidth(rating)
   };
 
-  const hotelReviews = reviews.filter((review) => review.id === Number(id));
+  const hotelReviews = reviews.filter((review) => review.id === offerId);
 
-  const nearbyOffers = offers.filter((offer) => offer.id !== Number(id));
+  const nearbyOffers = offers.filter((offer) => offer.id !== offerId);
 
   return (
     <div className="page">

@@ -31,7 +31,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
         </div>
       }
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <Link to={`${AppRoute.Property}${id}`}>
+        <Link to={`${AppRoute.Property}/${id}`}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place"/>
         </Link>
       </div>
@@ -50,7 +50,7 @@ function OfferCard ({offer}: OfferCardProp): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={`${AppRoute.Property}${id}`}>{title}</Link>
+          <Link to={`${AppRoute.Property}/${id}`}>{title}</Link>
         </h2>
         <p className="place-card__type">{capitalizeFirstChar(type)}</p>
       </div>
